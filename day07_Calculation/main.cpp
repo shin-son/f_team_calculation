@@ -2,12 +2,17 @@
 
 class Cal {
 public:
-
+	double getDivide(int a, int b) {
+		if (b == 0) return 0;
+		return (double)(a / b);
+	}
 };
 
-//테스트 케이스 작성
-TEST(t1, t2) {
-	EXPECT_EQ(1, 1);
+TEST(CalTest, DevideTest) {
+	Cal cal;
+	int num = 10, devider = 2;
+	double ret = cal.getDivide(num, devider);
+	EXPECT_EQ(ret, 5.0);
 }
 
 int main() {
